@@ -50,7 +50,7 @@ const mapStateToProps = (state,ownProps)=>{
 };
 
 const mapDispatchToProps = (dispatch, ownProps)=>{
-    const id = ownProps.match.params.id;
+    let id = ownProps.match.params.id;
     return {
         setTaskCompletion(id, isComplete){
             dispatch(mutations.setTaskComplete(id,isComplete))
